@@ -216,13 +216,12 @@ public class KnobView extends View {
             case MotionEvent.ACTION_DOWN: {
                 down_x = event.getX();
                 down_y = event.getY();
-                current_degree = 0;
-//                current_degree = detaDegree(o_x, o_y, down_x, down_y);
-//                if (current_degree > 180 && down_x > o_x) {
-//                    deta_degree = current_degree - 270;
-//                } else {
-//                    deta_degree = current_degree + 90;
-//                }
+                current_degree = detaDegree(o_x, o_y, down_x, down_y);
+                if (current_degree > 180 && down_x > o_x) {
+                    deta_degree = current_degree - 270;
+                } else {
+                    deta_degree = current_degree + 90;
+                }
                 break;
             }
             case MotionEvent.ACTION_MOVE: {
